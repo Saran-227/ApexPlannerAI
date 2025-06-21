@@ -92,17 +92,17 @@ export default function ExportPlan({ plan }: ExportPlanProps) {
         case "pdf":
           // In a real app, you'd use a PDF library like jsPDF
           content = generatePDFContent()
-          filename = `SchedulAI_${goalName}_${timestamp}.txt` // Using .txt for demo
+          filename = `ApexPlanner_${goalName}_${timestamp}.txt` // Using .txt for demo
           mimeType = "text/plain"
           break
         case "json":
           content = generateJSONContent()
-          filename = `SchedulAI_${goalName}_${timestamp}.json`
+          filename = `ApexPlanner_${goalName}_${timestamp}.json`
           mimeType = "application/json"
           break
         case "csv":
           content = generateCSVContent()
-          filename = `SchedulAI_${goalName}_${timestamp}.csv`
+          filename = `ApexPlanner_${goalName}_${timestamp}.csv`
           mimeType = "text/csv"
           break
         default:
@@ -144,7 +144,7 @@ export default function ExportPlan({ plan }: ExportPlanProps) {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center space-x-2">
-          <Download className="h-5 w-5 text-emerald-600" />
+          <Download className="h-5 w-5 text-purple-600" />
           <span>Export Your Plan</span>
         </CardTitle>
         <CardDescription>Download your personalized learning roadmap in various formats</CardDescription>
@@ -177,7 +177,7 @@ export default function ExportPlan({ plan }: ExportPlanProps) {
           <Button
             onClick={handleExport}
             disabled={isExporting}
-            className="w-full bg-emerald-600 hover:bg-emerald-700 text-white"
+            className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
           >
             {isExporting ? (
               <>
@@ -207,7 +207,7 @@ export default function ExportPlan({ plan }: ExportPlanProps) {
             onClick={() => {
               if (navigator.share) {
                 navigator.share({
-                  title: "My SchedulAI Learning Plan",
+                  title: "My ApexPlanner Learning Plan",
                   text: `Check out my learning plan: ${plan.goal}`,
                   url: window.location.href,
                 })

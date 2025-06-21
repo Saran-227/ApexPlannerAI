@@ -31,8 +31,8 @@ export default function CohereInsights({ plan }: CohereInsightsProps) {
       title: "Learning Intensity",
       value: `${avgTasksPerWeek} tasks/week`,
       description: "Average tasks per week",
-      color: "text-emerald-600",
-      bgColor: "bg-emerald-50 dark:bg-emerald-900/20",
+      color: "text-purple-600",
+      bgColor: "bg-purple-50 dark:bg-purple-900/20",
     },
     {
       icon: TrendingUp,
@@ -78,14 +78,14 @@ export default function CohereInsights({ plan }: CohereInsightsProps) {
         </div>
 
         {/* Cohere AI Recommendations */}
-        <div className="mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg">
+        <div className="mt-6 p-4 bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 rounded-lg">
           <h4 className="font-medium text-gray-900 dark:text-white mb-2 flex items-center">
             <Brain className="h-4 w-4 mr-2 text-blue-600" />
             Cohere AI Recommendations
           </h4>
           <div className="space-y-2">
             <div className="flex items-center space-x-2">
-              <Badge variant="outline" className="text-emerald-600 border-emerald-600">
+              <Badge variant="outline" className="text-purple-600 border-purple-600">
                 Optimal
               </Badge>
               <span className="text-sm text-gray-600 dark:text-gray-300">

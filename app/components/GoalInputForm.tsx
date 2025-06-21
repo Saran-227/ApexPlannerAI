@@ -342,9 +342,9 @@ Format the response clearly with headers and bullet points.`
       const generatedPlan = await generateAIPlan()
 
       // Save to localStorage
-      const savedPlans = JSON.parse(localStorage.getItem("schedulai-plans") || "[]")
+      const savedPlans = JSON.parse(localStorage.getItem("apexplanner-plans") || "[]")
       savedPlans.push(generatedPlan)
-      localStorage.setItem("schedulai-plans", JSON.stringify(savedPlans))
+      localStorage.setItem("apexplanner-plans", JSON.stringify(savedPlans))
 
       onPlanGenerated(generatedPlan)
     } catch (error) {
@@ -362,7 +362,7 @@ Format the response clearly with headers and bullet points.`
     <Card className="h-fit">
       <CardHeader>
         <CardTitle className="flex items-center space-x-2">
-          <Target className="h-5 w-5 text-emerald-600" />
+          <Target className="h-5 w-5 text-purple-600" />
           <span>Create Your AI-Powered Learning Plan</span>
         </CardTitle>
         <CardDescription>
@@ -388,7 +388,9 @@ Format the response clearly with headers and bullet points.`
                   type="button"
                   variant={formData.mode === mode.value ? "default" : "outline"}
                   className={`p-3 h-auto flex flex-col items-center space-y-1 ${
-                    formData.mode === mode.value ? "bg-emerald-600 hover:bg-emerald-700" : ""
+                    formData.mode === mode.value
+                      ? "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+                      : ""
                   }`}
                   onClick={() => setFormData({ ...formData, mode: mode.value })}
                 >
@@ -517,8 +519,8 @@ Format the response clearly with headers and bullet points.`
           {/* Generation Progress */}
           {isGenerating && (
             <Alert className="border-emerald-200 bg-emerald-50 dark:bg-emerald-900/20">
-              <Brain className="h-4 w-4 text-emerald-600 animate-pulse" />
-              <AlertDescription className="text-emerald-600 dark:text-emerald-400">
+              <Brain className="h-4 w-4 text-purple-600 animate-pulse" />
+              <AlertDescription className="text-purple-600 dark:text-purple-400">
                 <div className="flex items-center space-x-2">
                   <Sparkles className="h-4 w-4 animate-spin" />
                   <span>{generationStep}</span>
@@ -530,7 +532,7 @@ Format the response clearly with headers and bullet points.`
           {/* Submit Button */}
           <Button
             type="submit"
-            className="w-full bg-emerald-600 hover:bg-emerald-700 text-white"
+            className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
             disabled={isGenerating}
           >
             {isGenerating ? (

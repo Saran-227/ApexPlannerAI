@@ -6,17 +6,17 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "SchedulAI - Turn Your Goals Into Daily Wins with AI",
+  title: "ApexPlanner - Turn Your Goals Into Daily Wins with AI",
   description:
     "An agentic AI calendar assistant that breaks down learning goals, assignments, and habits into structured schedules — all within a smart, balanced calendar.",
   keywords: "AI calendar, goal planning, productivity, schedule assistant, learning planner",
-  authors: [{ name: "SchedulAI Team" }],
+  authors: [{ name: "ApexPlanner Team" }],
   openGraph: {
-    title: "SchedulAI - AI-Powered Smart Calendar Assistant",
+    title: "ApexPlanner - AI-Powered Smart Calendar Assistant",
     description: "Transform your goals into actionable daily plans with AI-powered scheduling.",
     type: "website",
   },
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({

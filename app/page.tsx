@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
+import Image from "next/image"
 import {
   Calendar,
   Target,
@@ -33,7 +34,7 @@ import ExportPlan from "./components/ExportPlan"
 import EnhancedRoadmapDisplay from "./components/EnhancedRoadmapDisplay"
 import CohereInsights from "./components/CohereInsights"
 
-export default function SchedulAIWebsite() {
+export default function ApexPlannerWebsite() {
   const [darkMode, setDarkMode] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [selectedCalendarMode, setSelectedCalendarMode] = useState("Learning")
@@ -143,30 +144,30 @@ export default function SchedulAIWebsite() {
       <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <Calendar className="h-8 w-8 text-emerald-600" />
-              <span className="text-xl font-bold text-gray-900 dark:text-white">SchedulAI</span>
+            <div className="flex items-center space-x-3">
+              <Image src="/apex-logo.png" alt="ApexPlanner Logo" width={32} height={32} className="w-8 h-8" />
+              <span className="text-xl font-bold text-gray-900 dark:text-white">ApexPlanner</span>
               <Badge className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs">Cohere Powered</Badge>
             </div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-gray-600 dark:text-gray-300 hover:text-emerald-600 transition-colors">
+              <a href="#features" className="text-gray-600 dark:text-gray-300 hover:text-purple-600 transition-colors">
                 Features
               </a>
               <a
                 href="#how-it-works"
-                className="text-gray-600 dark:text-gray-300 hover:text-emerald-600 transition-colors"
+                className="text-gray-600 dark:text-gray-300 hover:text-purple-600 transition-colors"
               >
                 How It Works
               </a>
-              <a href="#demo" className="text-gray-600 dark:text-gray-300 hover:text-emerald-600 transition-colors">
+              <a href="#demo" className="text-gray-600 dark:text-gray-300 hover:text-purple-600 transition-colors">
                 Demo
               </a>
-              <a href="#about" className="text-gray-600 dark:text-gray-300 hover:text-emerald-600 transition-colors">
+              <a href="#about" className="text-gray-600 dark:text-gray-300 hover:text-purple-600 transition-colors">
                 About
               </a>
-              <a href="#contact" className="text-gray-600 dark:text-gray-300 hover:text-emerald-600 transition-colors">
+              <a href="#contact" className="text-gray-600 dark:text-gray-300 hover:text-purple-600 transition-colors">
                 Contact
               </a>
               <Button variant="ghost" size="sm" onClick={() => setDarkMode(!darkMode)} className="p-2">
@@ -190,22 +191,22 @@ export default function SchedulAIWebsite() {
         {mobileMenuOpen && (
           <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <a href="#features" className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-emerald-600">
+              <a href="#features" className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-purple-600">
                 Features
               </a>
               <a
                 href="#how-it-works"
-                className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-emerald-600"
+                className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-purple-600"
               >
                 How It Works
               </a>
-              <a href="#demo" className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-emerald-600">
+              <a href="#demo" className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-purple-600">
                 Demo
               </a>
-              <a href="#about" className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-emerald-600">
+              <a href="#about" className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-purple-600">
                 About
               </a>
-              <a href="#contact" className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-emerald-600">
+              <a href="#contact" className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-purple-600">
                 Contact
               </a>
             </div>
@@ -217,13 +218,13 @@ export default function SchedulAIWebsite() {
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <div className="flex justify-center items-center space-x-2 mb-6">
-              <Calendar className="h-16 w-16 text-emerald-600" />
+            <div className="flex justify-center items-center space-x-4 mb-6">
+              <Image src="/apex-logo.png" alt="ApexPlanner Logo" width={64} height={64} className="w-16 h-16" />
               <Sparkles className="h-8 w-8 text-yellow-500 animate-pulse" />
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                SchedulAI
+              <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                ApexPlanner
               </span>
             </h1>
             <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-4 font-medium">
@@ -236,7 +237,7 @@ export default function SchedulAIWebsite() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
                 size="lg"
-                className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 text-lg"
+                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-3 text-lg"
                 onClick={() => setShowFunctionalDemo(true)}
               >
                 Try Cohere AI Demo
@@ -245,7 +246,7 @@ export default function SchedulAIWebsite() {
               <Button
                 variant="outline"
                 size="lg"
-                className="px-8 py-3 text-lg border-emerald-600 text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/20"
+                className="px-8 py-3 text-lg border-purple-600 text-purple-600 hover:bg-purple-50 dark:hover:bg-purple-900/20"
               >
                 View Roadmap
                 <ChevronRight className="ml-2 h-5 w-5" />
@@ -259,13 +260,13 @@ export default function SchedulAIWebsite() {
       {showFunctionalDemo && (
         <section
           id="demo"
-          className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/10 dark:to-teal-900/10"
+          className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/10 dark:to-blue-900/10"
         >
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">🚀 Cohere AI Demo</h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Experience SchedulAI powered by Cohere! Enter your goal and watch as advanced AI creates your
+                Experience ApexPlanner powered by Cohere! Enter your goal and watch as advanced AI creates your
                 personalized learning roadmap.
               </p>
             </div>
@@ -307,10 +308,10 @@ export default function SchedulAIWebsite() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, index) => (
               <div key={index} className="relative">
-                <Card className="h-full hover:shadow-lg transition-shadow duration-300 border-2 hover:border-emerald-200 dark:hover:border-emerald-700">
+                <Card className="h-full hover:shadow-lg transition-shadow duration-300 border-2 hover:border-purple-200 dark:hover:border-purple-700">
                   <CardHeader className="text-center">
-                    <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-emerald-600 dark:text-emerald-400 font-bold text-lg">{step.number}</span>
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-100 to-blue-100 dark:from-purple-900 dark:to-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-purple-600 dark:text-purple-400 font-bold text-lg">{step.number}</span>
                     </div>
                     <CardTitle className="text-xl mb-2">{step.title}</CardTitle>
                     <CardDescription className="text-gray-600 dark:text-gray-300">{step.description}</CardDescription>
@@ -323,7 +324,7 @@ export default function SchedulAIWebsite() {
                 </Card>
                 {index < steps.length - 1 && (
                   <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                    <ArrowRight className="h-6 w-6 text-emerald-400" />
+                    <ArrowRight className="h-6 w-6 text-purple-400" />
                   </div>
                 )}
               </div>
@@ -346,11 +347,11 @@ export default function SchedulAIWebsite() {
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-emerald-200 dark:hover:border-emerald-700"
+                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-purple-200 dark:hover:border-purple-700"
               >
                 <CardHeader>
-                  <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-100 to-blue-100 dark:from-purple-900 dark:to-blue-900 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="h-6 w-6 text-purple-600 dark:text-purple-400" />
                   </div>
                   <CardTitle className="text-xl mb-2">{feature.title}</CardTitle>
                   <CardDescription className="text-gray-600 dark:text-gray-300">{feature.description}</CardDescription>
@@ -367,7 +368,7 @@ export default function SchedulAIWebsite() {
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">Calendar Preview</h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
-              See how SchedulAI organizes your day across different modes
+              See how ApexPlanner organizes your day across different modes
             </p>
 
             <div className="flex justify-center mb-8">
@@ -377,7 +378,11 @@ export default function SchedulAIWebsite() {
                     key={mode}
                     variant={selectedCalendarMode === mode ? "default" : "ghost"}
                     onClick={() => setSelectedCalendarMode(mode)}
-                    className={selectedCalendarMode === mode ? "bg-emerald-600 hover:bg-emerald-700" : ""}
+                    className={
+                      selectedCalendarMode === mode
+                        ? "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+                        : ""
+                    }
                   >
                     {mode}
                   </Button>
@@ -389,7 +394,7 @@ export default function SchedulAIWebsite() {
           <Card className="max-w-4xl mx-auto">
             <CardHeader>
               <CardTitle className="flex items-center space-x-2">
-                <Calendar className="h-5 w-5 text-emerald-600" />
+                <Calendar className="h-5 w-5 text-purple-600" />
                 <span>Today's Schedule - {selectedCalendarMode} Mode</span>
               </CardTitle>
             </CardHeader>
@@ -401,7 +406,7 @@ export default function SchedulAIWebsite() {
                     className="flex items-center space-x-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
                   >
                     <div className="flex-shrink-0">
-                      <Badge variant="outline" className="text-emerald-600 border-emerald-600">
+                      <Badge variant="outline" className="text-purple-600 border-purple-600">
                         {item.time}
                       </Badge>
                     </div>
@@ -409,7 +414,7 @@ export default function SchedulAIWebsite() {
                       <p className="font-medium text-gray-900 dark:text-white">{item.task}</p>
                       <p className="text-sm text-gray-500 dark:text-gray-400 capitalize">{item.type}</p>
                     </div>
-                    <CheckCircle className="h-5 w-5 text-gray-400 hover:text-emerald-600 cursor-pointer transition-colors" />
+                    <CheckCircle className="h-5 w-5 text-gray-400 hover:text-purple-600 cursor-pointer transition-colors" />
                   </div>
                 ))}
               </div>
@@ -426,7 +431,7 @@ export default function SchedulAIWebsite() {
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">About Cohere AI</h2>
               <div className="space-y-4 text-lg text-gray-600 dark:text-gray-300">
                 <p>
-                  SchedulAI leverages Cohere's advanced language models to intelligently break down complex goals into
+                  ApexPlanner leverages Cohere's advanced language models to intelligently break down complex goals into
                   manageable daily tasks. Cohere AI understands context, priorities, and optimal scheduling patterns.
                 </p>
                 <p>
@@ -434,27 +439,23 @@ export default function SchedulAIWebsite() {
                   with personal commitments, ensuring sustainable progress without burnout.
                 </p>
                 <p>
-                  Built with Cohere's Command model, SchedulAI represents the future of personalized productivity and
+                  Built with Cohere's Command model, ApexPlanner represents the future of personalized productivity and
                   intelligent learning assistance.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">Cohere AI</Badge>
-                <Badge className="bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200">
-                  Next.js
-                </Badge>
-                <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
+                <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">Next.js</Badge>
+                <Badge className="bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200">
                   TypeScript
                 </Badge>
-                <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200">
-                  Tailwind CSS
-                </Badge>
+                <Badge className="bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200">Tailwind CSS</Badge>
               </div>
             </div>
             <div className="relative">
-              <Card className="p-8 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border-2 border-blue-200 dark:border-blue-700">
+              <Card className="p-8 bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 border-2 border-purple-200 dark:border-purple-700">
                 <div className="text-center">
-                  <Brain className="h-16 w-16 text-blue-600 mx-auto mb-4" />
+                  <Brain className="h-16 w-16 text-purple-600 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                     Cohere AI-Powered Intelligence
                   </h3>
@@ -503,11 +504,11 @@ export default function SchedulAIWebsite() {
                   </label>
                   <Textarea
                     id="message"
-                    placeholder="Tell us about your goals and how SchedulAI can help you..."
+                    placeholder="Tell us about your goals and how ApexPlanner can help you..."
                     rows={4}
                   />
                 </div>
-                <Button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 text-lg">
+                <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 text-lg">
                   Get Access
                   <Zap className="ml-2 h-5 w-5" />
                 </Button>
@@ -522,17 +523,17 @@ export default function SchedulAIWebsite() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <Calendar className="h-8 w-8 text-emerald-400" />
-                <span className="text-xl font-bold">SchedulAI</span>
+              <div className="flex items-center space-x-3 mb-4">
+                <Image src="/apex-logo.png" alt="ApexPlanner Logo" width={32} height={32} className="w-8 h-8" />
+                <span className="text-xl font-bold">ApexPlanner</span>
                 <Badge className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs">Cohere</Badge>
               </div>
               <p className="text-gray-400 mb-4">Turn your goals into daily wins with Cohere AI-powered scheduling.</p>
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
                   <Github className="h-6 w-6" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
                   <Linkedin className="h-6 w-6" />
                 </a>
               </div>
@@ -542,27 +543,27 @@ export default function SchedulAIWebsite() {
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#features" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                  <a href="#features" className="text-gray-400 hover:text-purple-400 transition-colors">
                     Features
                   </a>
                 </li>
                 <li>
-                  <a href="#how-it-works" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                  <a href="#how-it-works" className="text-gray-400 hover:text-purple-400 transition-colors">
                     How It Works
                   </a>
                 </li>
                 <li>
-                  <a href="#demo" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                  <a href="#demo" className="text-gray-400 hover:text-purple-400 transition-colors">
                     Demo
                   </a>
                 </li>
                 <li>
-                  <a href="#about" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                  <a href="#about" className="text-gray-400 hover:text-purple-400 transition-colors">
                     About
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                  <a href="#contact" className="text-gray-400 hover:text-purple-400 transition-colors">
                     Contact
                   </a>
                 </li>
@@ -579,7 +580,7 @@ export default function SchedulAIWebsite() {
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center">
             <p className="text-gray-400">
-              © 2024 SchedulAI. Built with passion for productivity and powered by Cohere AI.
+              © 2024 ApexPlanner. Built with passion for productivity and powered by Cohere AI.
             </p>
           </div>
         </div>
