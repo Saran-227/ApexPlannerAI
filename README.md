@@ -1,30 +1,56 @@
-# ApexPlanner website
+# ApexPlannerAI 🧠📆  
+*OmniDimension-Inspired AI Task Planner & Calendar Assistant*
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+## 🔍 Overview
+**ApexPlannerAI** is a smart, AI-powered planning assistant that transforms **natural language inputs** into **real-world task automation** and **calendar scheduling**. This project aligns with the **OmniDimension hackathon problem statement**, where users describe tasks like:
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/ssaranjeet227-gmailcoms-projects/v0-schedul-ai-website)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/VzmYqx0qk1u)
+> “Book a dentist tomorrow at 5 PM and add it to my calendar”
 
-## Overview
+The system then:
+- Parses the task using **Google Gemini AI**
+- Breaks it into subtasks (e.g., search, book, schedule)
+- Simulates external actions (e.g., mock booking)
+- Adds relevant entries to the calendar
+- Provides step-by-step execution updates — all automatically
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## 💡 Problem Statement Inspiration (Omni)
+This project is built around OmniDimension’s challenge:
+> “Build a multi-agent system that understands and executes user-described tasks end-to-end with no manual steps.”
 
-## Deployment
+ApexPlannerAI brings this to life by integrating goal planning, scheduling, and simulated task execution into a unified interface.
 
-Your project is live at:
+---
 
-**[https://vercel.com/ssaranjeet227-gmailcoms-projects/v0-schedul-ai-website](https://vercel.com/ssaranjeet227-gmailcoms-projects/v0-schedul-ai-website)**
+## ✨ Features
+- 🧠 **Gemini-Powered Task Understanding**  
+  Uses Google Gemini API to extract intent, action steps, time, and type of task (goal-based or action-based).
+  
+- 📅 **Smart Calendar Roadmaps**  
+  Automatically generates study or goal-based schedules when input is like: “Learn Python in 30 days”.
 
-## Build your app
+- 🔁 **Real-Time Task Breakdown & Status Updates**  
+  Displays step-by-step execution of AI-decided actions (e.g., “Searching dentist…”, “Booking slot…”, “Added to calendar!”).
 
-Continue building your app on:
+- 🎯 **Multi-Agent Inspired Logic**  
+  Inspired by OmniDimension’s multi-agent system idea — every action is broken into autonomous, agent-like steps.
 
-**[https://v0.dev/chat/projects/VzmYqx0qk1u](https://v0.dev/chat/projects/VzmYqx0qk1u)**
+- 💬 **One-Input Simplicity**  
+  A single input box controls everything — no form-filling, no clicking through options.
 
-## How It Works
+---
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+## 🚀 How It Works
+1. User types: `Remind me to drink water every 2 hours`
+2. Gemini API processes the input and returns:
+   - Intent: `create_reminder`
+   - Repeat: `true`
+   - Output: `Reminder set!`
+3. Task is visualized and added to the planner/calendar.
+
+---
+
+## 🛠️ Tech Stack
+- **Frontend**: HTML, Tailwind CSS, JavaScript
+- **AI**: [Gemini Pro API (Google AI)](https://ai.google.dev/)
+- **Deployment**: Vercel  
+- **Calendar Engine**: Custom in-browser schedule generator
